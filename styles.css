@@ -131,6 +131,7 @@ body {
     color:black;
     padding: 5px;
     text-align: center;
+    text-decoration-line: underline;
 }
 
 .experience-body {
