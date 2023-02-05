@@ -1,12 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
 
 * {
     box-sizing: border-box;
 }
 
+body {
+    background-color: bisque;
+}
+
 .page-name {
-    font-family: 'Oswald', sans-serif;
-    font-size: 60px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 80px;
     font-weight: normal;
     text-align: center;
     padding: 0px 8px;
@@ -23,7 +29,7 @@
     background-color: rgb(103, 103, 255);
 }
 
-.hero {
+#hero {
     padding-top: 20px;
 }
 
@@ -33,6 +39,10 @@
     font-weight: bold;
     font-size: 30px;
     text-decoration: none;
+}
+
+.section-link:hover {
+    color: rgba(0, 0, 0, 0.475);
 }
 
 .slideshow-container {
@@ -80,14 +90,14 @@
     height: 15px;
     width: 15px;
     margin: 0 2px;
-    background-color: #bbb;
+    background-color: #9b9b9b;
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.6s ease;
 }
 
 .active, .dot:hover {
-    background-color: #717171;
+    background-color: #666666;
 }
 
 .fade {
@@ -101,15 +111,103 @@
 }
 
 @media only screen and (max-width: 300px) {
-    .prev, .next,.text {font-size: 11px}
+    .prev, .next, .text {font-size: 11px}
 }
 
 .hero-img {
     width: 100%;
     vertical-align: middle;
+    border-radius: 20px;
 }
 
 .carousel-dots {
     margin: 20px 0px;
     text-align: center;
+}
+
+.section-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 45px;
+    color:black;
+    padding: 5px;
+    text-align: center;
+}
+
+.experience-body {
+    display: grid;
+    grid-template-areas: 
+    "proj1 proj2"
+    "proj3 proj4";
+    justify-content: center;
+}
+
+.project-1 {
+    grid-area: proj1;
+    border-top-left-radius: 20px;
+}
+
+.project-2 {
+    grid-area: proj2;
+    border-top-right-radius: 20px;
+}
+
+.project-3 {
+    grid-area: proj3;
+    border-bottom-left-radius: 20px;
+}
+
+.project-4 {
+    grid-area: proj4;
+    border-bottom-right-radius: 20px;
+}
+
+.project-3, .project-4 {
+    border-bottom: 7px solid rgb(103, 103, 255);
+}
+
+.project-2, .project-4 {
+    border-right: 7px solid rgb(103, 103, 255);
+}
+
+.project {
+    border-left: 7px solid rgb(103, 103, 255);
+    border-top: 7px solid rgb(103, 103, 255);
+    padding: 20px 0;
+}
+
+.project-title {
+    font-size: 28px;
+    margin-bottom: 12px;
+    margin-top: 0;
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+}
+
+.project-info {
+    margin-top: 6px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.project-date {
+    margin-bottom: 10px;
+}
+
+.project-link {
+    background-color: rgb(192, 154, 108);
+    border-radius: 8px;
+    padding: 3px;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+.project-link:hover {
+    background-color: rgb(158, 127, 88)
+}
+
+.project-image {
+    width: 50%;
+    display: block;
+    margin: 0 auto;
 }
